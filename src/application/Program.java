@@ -53,7 +53,7 @@ public class Program {
 		//PARA FINS DIDATICOS NÃO IREI ESTÁ OBTENDO AINDA O QUE O USUARIO DIGITAR, ENTÃO A INSERÇÃO SERA FEITA DE FORMA MANUAL AQUI NO CONSOLE =)  
 		Seller newSeller = new Seller(null, "Greg", "gregGgmail", new Date(), 4000.0, department);
 		sellerDao.insert(newSeller);
-		System.out.println("INSERTED! NEW ID = " + newSeller.getId());
+		System.out.println("INSERTED! NEW ID = " + newSeller.getId()); 
 		
 		System.out.println();
 		System.out.println();
@@ -64,5 +64,11 @@ public class Program {
 		sellerDao.update(seller);
 		System.out.println("UPDATE COMPLETED!");
 		
+		System.out.println();
+		System.out.println();
+
+		System.out.println("=== EXECUTANDO TESTE 6: SELLER DELETE ===");
+		sellerDao.deleteById(18);
+		System.out.println("DELETE COMPLETED");
 	}
 }
